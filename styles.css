@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 body {
   line-height: 1.5;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 * {
   margin: 0;
@@ -22,6 +22,7 @@ ul {
 .footer {
   background-color: #121212;
   padding: 70px 0;
+  font-family: "Inter", sans-serif;
 }
 .footer-col {
   width: 25%;
@@ -60,8 +61,10 @@ ul {
 }
 .footer-col ul li a:hover {
   color: #4285f4;
-  padding-left: 5px;
-  font-weight: 500;
+  padding-left: 15px;
+  font-weight: 400;
+  transform: scale(1.1);
+  transition: 0.3s ease;
 }
 .footer-col .social-links a {
   display: inline-block;
@@ -89,8 +92,219 @@ ul {
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: #000;
-  color: rgb(87, 87, 87);
+  color: #4285f4;
   font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+.team-area {
+  padding: 60px 0;
+  background-color: #003283;
+  font-family: "Inter", sans-serif;
+}
+
+.section-heading {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.sub-section-heading {
+  text-align: center;
+  color: #8fbaff;
+  padding-bottom: 50px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.section-heading-brands {
+  text-align: center;
+  color: #003283;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.sub-section-heading-brands {
+  text-align: center;
+  color: #4285f4;
+  padding-bottom: 50px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.brands-header {
+  font-family: "Inter", sans-serif;
+}
+
+.brand-area {
+  padding: 60px 0;
+  background-color: #fff;
+  font-family: "Inter", sans-serif;
+}
+
+.card {
+  border: none;
+  background-color: #fff;
+  height: 500px;
+}
+
+.img-area {
+  width: 100%;
+  height: auto;
+
+  display: inline-block;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.team-single:hover .side-two {
+  transform: rotateY(0deg);
+  border-radius: 5px;
+}
+
+.team-single:hover .side-one {
+  transform: rotateY(180deg);
+}
+
+.content-area {
+  transform: perspective(1000px);
+  transition: 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.side-one {
+  position: relative;
+  transform: rotateY(0deg);
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.side-two {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transform: rotateY(-180deg);
+}
+
+.side-one,
+.side-two {
+  backface-visibility: hidden;
+  transition: 1s;
+  transform-style: preserve-3d;
+}
+
+.side-one .card,
+.side-two.card {
+  min-height: 312px;
+}
+
+.side-two .card a {
+  font-size: 18px;
+  color: #000;
+}
+
+h4 {
+  color: #000;
+  letter-spacing: 0px;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.cardname {
+  margin-top: 20px;
+}
+
+.designation {
+  font-size: 14px;
+  font-weight: 400;
+  color: #6d6d6d;
+}
+
+.backtext {
+  padding-top: 75px;
+  padding-bottom: 0px;
+}
+.company {
+  height: 20px;
+  width: auto;
+  top: 50%;
+  left: 50%;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+}
+.row {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.columnlast {
+  width: 33.33%;
+  padding: 20px;
+  top: 50%;
+  left: 50%;
+}
+
+.our-clients {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.our-clients ul {
+  padding: 0;
+  margin: 0;
+}
+
+.our-clients ul li {
+  list-style: none;
+  display: inline-block;
+  width: 180px;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.5s;
+}
+
+.our-clients ul li img {
+  width: 100%;
+  height: 100%;
+}
+.our-clients ul li img:nth-child(1) {
+  transform: translateY(0);
+  transition: 0.5s;
+}
+.our-clients ul li img:nth-child(2) {
+  transform: translateY(0);
+  transition: 0.5s;
+}
+
+/*Hover-Section*/
+
+.our-clients ul li:hover img:nth-child(1) {
+  transform: translateY(-100%);
+  transition: 0.5s;
+}
+.our-clients ul li:hover img:nth-child(2) {
+  transform: translateY(-100%);
+  transition: 0.5s;
 }
 
 /*responsive*/
@@ -109,5 +323,64 @@ ul {
   }
   .last {
     font-size: 14px;
+  }
+
+  .sub-section-heading-brands {
+    text-align: center;
+    color: #4285f4;
+    padding-bottom: 50px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .section-heading-brands {
+    text-align: center;
+    color: #003283;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .section-heading {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .sub-section-heading {
+    text-align: center;
+    color: #8fbaff;
+    padding-bottom: 50px;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .our-clients {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .our-clients ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  .our-clients ul li {
+    list-style: none;
+    display: inline-block;
+    width: 90px;
+    height: 50px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.5s;
   }
 }
